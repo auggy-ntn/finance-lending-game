@@ -41,9 +41,7 @@ Our strategy is based on a two-step, data-driven pricing model.
 
 1.  **Default Probability Prediction**: We first build a model to estimate a continuous probability of default ($PD_i$) for each applicant. This is more effective than a simple binary classification.
 2.  **Break-Even Pricing**: With the default probability, we calculate the **break-even interest rate** ($\overline{r}_i$)—the minimum rate required to cover the expected loss from default.The formula is:
-    $$
-    \overline{r}_i = \frac{PD_i}{1 - PD_i}
-    $$
+    $\overline{r}_i = \frac{PD_i}{1 - PD_i}$
 3.  **Final Offer Rate**: Our final offered rate is the break-even rate plus a strategic profit margin. This margin is set to balance profitability against the need to stay competitive and win loan applications.
 
 
@@ -59,7 +57,7 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 
 1. Clone the project:
 ```zsh
-git clone https://github.com/auggy-ntn/Interpretability-Stability-and-Fairness-project.git
+git clone https://github.com/auggy-ntn/finance-lending-game
 ```
 
 2. In the project's workspace run the following command to synchronize your environment with the project's development requirements:
