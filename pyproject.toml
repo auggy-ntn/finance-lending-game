@@ -1,7 +1,46 @@
 [project]
 name = "05-intro-to-finance-for-data-scientists"
 version = "0.1.0"
-description = "Add your description here"
+description = "X-HEC MScT Data Science and AI for Business final project for course Introduction to Finance for Data Scientists"
 readme = "README.md"
 requires-python = ">=3.13"
-dependencies = []
+dependencies = [
+    "matplotlib>=3.10.7",
+    "numpy>=2.3.3",
+    "pandas>=2.3.3",
+    "scikit-learn>=1.7.2",
+]
+
+# URLs for the project
+[project.urls]
+repository = "https://github.com/auggy-ntn/finance-lending-game"
+
+# Build system requirements
+[build-system]
+requires = ["setuptools>=65", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src*", "models*", "constants*"]
+
+
+###### Configuration for Ruff linter and formatter ######
+[tool.ruff]
+extend-include = ["*.py", "*.ipynb"]
+line-length = 88
+indent-width = 4
+
+[tool.ruff.lint]
+select = [
+    "E",   # pycodestyle (errors)
+    "F",   # pyflakes
+    "I",   # isort
+    "B",   # flake8-bugbear
+]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"

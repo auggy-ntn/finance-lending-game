@@ -45,3 +45,45 @@ Our strategy is based on a two-step, data-driven pricing model.
     \overline{r}_i = \frac{PD_i}{1 - PD_i}
     $$
 3.  **Final Offer Rate**: Our final offered rate is the break-even rate plus a strategic profit margin. This margin is set to balance profitability against the need to stay competitive and win loan applications.
+
+
+## Installation & Usage
+
+### Development
+To reproduce the development environment, follow these steps:
+
+0. **(Prerequisite)** Have ```uv``` installed. See [the project's website](https://docs.astral.sh/uv/) for more information. In your terminal (MacOS and Linux users), run 
+```zsh
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+1. Clone the project:
+```zsh
+git clone https://github.com/auggy-ntn/Interpretability-Stability-and-Fairness-project.git
+```
+
+2. In the project's workspace run the following command to synchronize your environment with the project's development requirements:
+```zsh
+uv sync --dev
+```
+You are all set!
+
+Alternatively, if you don't want to use ```uv```, you can run the following command:
+```zsh
+pip install -r requirements.txt
+```
+
+### Developing with uv
+
+If you work on the project and want to add a package, simply run
+```zsh
+uv add <package>
+``` 
+which will update the ```pyproject.toml``` file and the ```uv.lock``` file used by ```uv``` to sync the environment when you run ```uv sync```.
+
+To generate the updated ```requirements.txt``` file, run the following command
+```zsh
+uv pip freeze > requirements.txt
+```
+
+Commit and push these new files to GitHub for others to replicate your environment.
