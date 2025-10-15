@@ -84,7 +84,7 @@ def plot_confusion_matrix(y_test, y_pred, cmap="Greens"):
         else 0
     )
 
-    print(f"\nModel Metrics:")
+    print("\nModel Metrics:")
     print(f"{'=' * 40}")
     print(f"Accuracy:  {accuracy:.4f} ({accuracy * 100:.2f}%)")
     print(f"Precision: {precision:.4f} ({precision * 100:.2f}%)")
