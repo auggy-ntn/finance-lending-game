@@ -5,6 +5,7 @@ description = "X-HEC MScT Data Science and AI for Business final project for cou
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
+    "lightgbm>=4.6.0",
     "matplotlib>=3.10.7",
     "numpy>=2.3.3",
     "optuna>=4.5.0",
