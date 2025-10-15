@@ -12,3 +12,5 @@ PAST_LOANS_PATH = DATA_DIR / "PastLoans.csv"
 NEW_LOANS_PATH = DATA_DIR / "NewApplications_Lender2_Round1.csv"
 
 METRICS_PATH = OUTPUT_DIR / "metrics.csv"
+
+PREPROCESSOR_PATH = MODELS_DIR / "preprocessor.pkl"
