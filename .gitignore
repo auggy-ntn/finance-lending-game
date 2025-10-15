@@ -5,8 +5,11 @@ build/
 dist/
 wheels/
 *.egg-info
-data/
 *.pdf
 
 # Virtual environments
 .venv
+
+# Data files
+data/*.csv
+data/*.xlsx
