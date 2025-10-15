@@ -40,6 +40,9 @@ def compute_and_store_metrics(
     # Append to the csv file or create it if it doesn't exist
     try:
         existing_df = pd.read_csv(filepath)
+        # Drop any existing row with the same model name
+        existing_df = existing_df[existing_df["Model"] != model_name]
+
         updated_df = pd.concat([existing_df, metrics_df], ignore_index=True)
         updated_df.to_csv(filepath, index=False)
     except FileNotFoundError:
