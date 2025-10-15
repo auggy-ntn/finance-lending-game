@@ -1,11 +1,13 @@
 # Preprocessing for model training
+from typing import Tuple
+
 import pandas as pd
 from sklearn.preprocessing import OneHotEncoder, StandardScaler
 
 import constants.constants as cst
 
 
-def preprocess_data(data: pd.DataFrame) -> pd.DataFrame:
+def preprocess_data(data: pd.DataFrame) -> Tuple[pd.DataFrame, pd.Series]:
     """Preprocess the data for model training.
 
     Args:
@@ -13,6 +15,7 @@ def preprocess_data(data: pd.DataFrame) -> pd.DataFrame:
 
     Returns:
         pd.DataFrame: The preprocessed data.
+        pd.Series: The target variable.
     """
 
     # One-hot encode categorical variables
@@ -30,4 +33,5 @@ def preprocess_data(data: pd.DataFrame) -> pd.DataFrame:
     # Drop signals we won't have access to at prediction time (signals 1 and 3)
     data_preprocessed = data_preprocessed.drop(columns=[cst.SIGNAL_1, cst.SIGNAL_3])
 
-    return data_preprocessed
+    # Return X and y
+    return data_preprocessed, data[cst.TARGET]
