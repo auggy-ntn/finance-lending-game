@@ -14,3 +14,6 @@ NEW_LOANS_PATH = DATA_DIR / "NewApplications_Lender2_Round1.csv"
 METRICS_PATH = OUTPUT_DIR / "metrics.csv"
 
 PREPROCESSOR_PATH = MODELS_DIR / "preprocessor.pkl"
+
+RESULTS_PATH = DATA_DIR / "Round1_Diagnostic_21.csv"
+NEW_LOANS_PATH_2 = DATA_DIR / "NewApplications_Lender2_Round2.csv"
