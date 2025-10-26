@@ -62,7 +62,7 @@ git clone https://github.com/auggy-ntn/finance-lending-game
 
 2. In the project's workspace run the following command to synchronize your environment with the project's development requirements:
 ```zsh
-uv sync --dev
+uv sync --all-groups
 ```
 You are all set!
 
