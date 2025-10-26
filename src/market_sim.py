@@ -449,7 +449,7 @@ def suggest_risk_based_markup(
         if actual_default > predicted_default * 1.1:
             suggestions["adjustments"]["adverse_selection_penalty"] = 0.02
             suggestions["reasoning"].append(
-                "⚠️  Adverse selection detected: When pricing much cheaper, "
+                "  Adverse selection detected: When pricing much cheaper, "
                 "actual defaults exceed predictions by >10%. "
                 "Consider adding 2% markup."
             )
@@ -459,12 +459,12 @@ def suggest_risk_based_markup(
         for idx, row in risk_segment_analysis.iterrows():
             if row["prediction_error"] > 0.05:  # Underestimating risk
                 suggestions["reasoning"].append(
-                    f"⚠️  Risk segment {idx}: Underestimating defaults by "
+                    f"  Risk segment {idx}: Underestimating defaults by "
                     f"{row['prediction_error']:.2%}. Consider higher markup."
                 )
             elif row["avg_profit_per_loan"] < 0:
                 suggestions["reasoning"].append(
-                    f"❌ Risk segment {idx}: Negative profit. "
+                    f" Risk segment {idx}: Negative profit. "
                     f"Consider avoiding or increasing markup significantly."
                 )
 
