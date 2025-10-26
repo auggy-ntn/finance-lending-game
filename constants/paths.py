@@ -10,6 +10,7 @@ MODELS_DIR = PROJECT_ROOT / "models"
 
 PAST_LOANS_PATH = DATA_DIR / "PastLoans.csv"
 NEW_LOANS_PATH = DATA_DIR / "NewApplications_Lender2_Round1.csv"
+FINAL_TRAINING_PATH = DATA_DIR / "Final_Training_Data.csv"
 
 METRICS_PATH = OUTPUT_DIR / "metrics.csv"
 
