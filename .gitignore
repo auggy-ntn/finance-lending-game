@@ -13,3 +13,11 @@ wheels/
 # Data files
 data/*.csv
 data/*.xlsx
+
+# Models
+models/*
+!models/.gitkeep
+
+# Outputs
+output/*
+!output/.gitkeep
