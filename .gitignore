@@ -21,3 +21,10 @@ models/*
 # Outputs
 output/*
 !output/.gitkeep
+
+# Report
+report/*
+!report/.gitkeep
+
+# Temporary files
+temp.*
