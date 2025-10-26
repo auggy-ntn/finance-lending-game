@@ -1,6 +1,5 @@
 import matplotlib.pyplot as plt
-
-from sklearn.metrics import roc_curve, roc_auc_score
+from sklearn.metrics import roc_auc_score, roc_curve
 
 
 def plot_roc_curve(y_true, y_pred_proba):
